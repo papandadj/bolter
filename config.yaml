@@ -1,0 +1,11 @@
+remote:
+  - host: test # # host identification, a tag
+    address: 127.0.0.1:40022 # remote machine address, like 127.0.0.1:40022
+    user: root #remote machine username, like root
+    password: kik #remote machine password
+    filePath: /home/example.db #remote machine file you want to view
+    systemInfo: linux_arm64 #remote machine system information, like linux_amd64 linux_arm64
+    agentName: bolter_agent # remote machine agent name, agent will be uploaded to the /tmp/{agentName}
+    agentPushPolicy:
+      always # (Function not implemented)agent uploaded policy, like  always ifNotPresent。 if ifNotPresent, bolter check
+      #whether the file(filePath) on the remote machine, if it is not, is with send agent
